@@ -67,7 +67,8 @@ const EditResume = () => {
       summary: "",
     },
     template: {
-      theme: "modern",
+      // default to first available template id
+      theme: "01",
       colorPalette: [],
     },
     contactInfo: {
