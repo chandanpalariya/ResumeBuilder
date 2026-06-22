@@ -14,8 +14,10 @@ const ThemeSelector = ({ selectedTheme, setSelectedTheme, resumedata, onClose })
 
   // selected theme Template using id
   const initialIndex = resumeTemplates.findIndex((t) => t.id === selectedTheme);
+  const initialTheme =
+    initialIndex >= 0 ? resumeTemplates[initialIndex].id : resumeTemplates[0]?.id || '';
   const [selectedTemplate, setSelectedTemplate] = useState({
-    theme: selectedTheme || resumeTemplates[0]?.id || '',
+    theme: initialTheme,
     index: initialIndex >= 0 ? initialIndex : 0,
   });  
 
